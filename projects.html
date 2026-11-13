@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Hamza Jafri</title>
+  <meta name="description" content="Case studies by Hamza Jafri: sales forecasting on Microsoft Fabric, Power BI dashboards, churn prediction with XGBoost, and an agentic RAG system for Pakistani employment law.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="index.html">hamza<span>.</span>jafri</a>
+      <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Projects</h1>
+      <p>Case studies from production work and self-directed builds. Each one lists the problem, what I built, the stack, and the outcome.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filter projects">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="forecasting">Forecasting</button>
+      <button class="filter" data-filter="bi">Power BI</button>
+      <button class="filter" data-filter="ml">ML</button>
+      <button class="filter" data-filter="genai">GenAI</button>
+    </div>
+
+    <section class="cases">
+
+      <!-- 1. Forecasting -->
+      <article class="case" data-cat="forecasting">
+        <div class="case-head">
+          <span class="badge">Production · Herbion Pharma</span>
+          <h2>End-to-End Sales Forecasting &amp; Shipment Planning</h2>
+          <p class="one-liner">A rolling demand forecast that feeds directly into shipment planning, built end to end inside Microsoft Fabric.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>Problem</h3>
+            <p>Inventory and logistics decisions needed forward-looking demand numbers that stayed current as new sales data arrived, instead of a static forecast that went stale.</p>
+          </div>
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>Data ingestion into a Fabric Lakehouse, followed by EDA and feature engineering in Python.</li>
+              <li>A rolling forecast framework that regenerates demand projections as new data lands.</li>
+              <li>A shipment planning pipeline that converts forecasted demand into logistics requirements.</li>
+              <li>Power BI dashboards for sales trends, forecast outputs and shipment plans, used by decision-makers.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Outcome</h3>
+            <p>Forecasts and shipment plans supported inventory and operational planning in a single connected workflow, from raw data to dashboard.</p>
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Microsoft Fabric</span><span class="tag">Lakehouse</span><span class="tag">Data Factory</span><span class="tag">Time-series</span><span class="tag">Power BI</span></div>
+          <!-- Add a link row here when you have something public:
+          <div class="links-row"><a class="btn" href="URL" target="_blank" rel="noopener">Write-up</a></div> -->
+        </div>
+      </article>
+
+      <!-- 2. Pipeline reliability -->
+      <article class="case" data-cat="forecasting">
+        <div class="case-head">
+          <span class="badge">Production · Centegy Technologies</span>
+          <h2>Forecasting Pipeline Reliability &amp; Train–Inference Debugging</h2>
+          <p class="one-liner">Finding and fixing why predictions in production did not match what the model saw in training.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>Problem</h3>
+            <p>A Microsoft Fabric sales-forecasting workflow had mismatches between training and inference, which made prediction accuracy hard to trust.</p>
+          </div>
+          <div class="block">
+            <h3>What I did</h3>
+            <ul>
+              <li>Traced mismatches through feature analysis, SQL validation and systematic model testing.</li>
+              <li>Validated joins and standardized master data so the same entities lined up across stages.</li>
+              <li>Built reusable checks for pipeline and prediction accuracy, plus Python and SQL scripts to automate data preparation, validation and recurring tasks.</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Microsoft Fabric</span><span class="tag">Data validation</span></div>
+        </div>
+      </article>
+
+      <!-- 3. Power BI: pricing -->
+      <article class="case" data-cat="bi">
+        <div class="case-head">
+          <span class="badge">Production · Herbion Pharma</span>
+          <h2>Pricing Intelligence Pipeline &amp; Dashboards</h2>
+          <p class="one-liner">Tracking company and competitor product prices across international markets in one place.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>An automated pipeline that collects Herbion and competitor product prices across international markets.</li>
+              <li>Interactive Power BI dashboards for pricing analysis, so the team could compare markets and make pricing decisions faster.</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">Web scraping</span><span class="tag">Power BI</span><span class="tag">DAX</span></div>
+        </div>
+      </article>
+
+      <!-- 4. Power BI: HR -->
+      <article class="case" data-cat="bi">
+        <div class="case-head">
+          <span class="badge">Portfolio project</span>
+          <h2>HR Executive Analytics Dashboard</h2>
+          <p class="one-liner">A leadership-level view of workforce size, attrition and payroll.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>A star-schema data model with DAX measures for headcount, attrition %, payroll cost and salary metrics.</li>
+              <li>Interactive KPI visuals with navigation between workforce trends and departmental analysis.</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Star schema</span><span class="tag">Power Query</span></div>
+          <!-- Add screenshots: put images in an images/ folder, then uncomment:
+          <div class="shots"><img src="images/hr-dashboard.png" alt="HR dashboard overview"></div> -->
+        </div>
+      </article>
+
+      <!-- 5. Churn -->
+      <article class="case" data-cat="ml">
+        <div class="case-head">
+          <span class="badge">Portfolio project</span>
+          <h2>Customer Retention Prediction System</h2>
+          <p class="one-liner">Predicting whether an e-commerce customer comes back after their first order.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>Problem</h3>
+            <p>Identify, right after a first purchase, which customers are unlikely to return so retention effort can be targeted.</p>
+          </div>
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>Cleaned raw e-commerce data covering 93K users and engineered 19 features based on first-order behaviour.</li>
+              <li>Trained an XGBoost classifier to predict return vs. no return.</li>
+              <li>Served it with FastAPI and Docker for both real-time and batch predictions.</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">XGBoost</span><span class="tag">scikit-learn</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">pandas</span></div>
+        </div>
+      </article>
+
+      <!-- 6. RAG -->
+      <article class="case" data-cat="genai">
+        <div class="case-head">
+          <span class="badge">Portfolio project</span>
+          <h2>PAKEmployee GPT: Agentic RAG for Pakistani Employment Law</h2>
+          <p class="one-liner">A question-answering system grounded in Pakistani employment and contract law.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>Hybrid retrieval (ChromaDB vector search plus BM25) over 2,100+ document chunks, with reranking.</li>
+              <li>ReAct agents that decide how to retrieve and answer.</li>
+              <li>Served through containerized FastAPI with a Streamlit UI.</li>
+            </ul>
+          </div>
+          <div class="block">
+            <h3>Results</h3>
+            <div class="stats">
+              <div><div class="stat">0.93</div><div class="stat-label">Faithfulness (RAGAS)</div></div>
+              <div><div class="stat">0.83</div><div class="stat-label">Answer relevancy (RAGAS)</div></div>
+              <div><div class="stat">5 min → &lt;15 s</div><div class="stat-label">Latency</div></div>
+              <div><div class="stat">−70%</div><div class="stat-label">LLM calls</div></div>
+            </div>
+            <p style="margin-top:14px">Latency and call reductions came from multi-provider fallback (Gemini to Groq), rate-limit handling and context compression.</p>
+          </div>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">ReAct</span><span class="tag">ChromaDB</span><span class="tag">BM25</span><span class="tag">RAGAS</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
+        </div>
+      </article>
+
+      <!-- 7. Invoice -->
+      <article class="case" data-cat="genai">
+        <div class="case-head">
+          <span class="badge">Production · Herbion Pharma</span>
+          <h2>Invoice Data Extraction with an LLM</h2>
+          <p class="one-liner">Turning multi-format supplier invoices into structured records without manual data entry.</p>
+        </div>
+        <div class="case-body">
+          <div class="block">
+            <h3>What I built</h3>
+            <ul>
+              <li>A Gemini API pipeline that parses structured fields from invoices in multiple formats.</li>
+              <li>Output stored in SharePoint for downstream finance workflows, reducing manual data entry.</li>
+            </ul>
+          </div>
+          <div class="tags"><span class="tag">Gemini API</span><span class="tag">Prompt engineering</span><span class="tag">SharePoint</span><span class="tag">Python</span></div>
+        </div>
+      </article>
+
+    </section>
+
+    <p class="sub" style="margin-top:12px">More code on <a href="https://github.com/nugrad" target="_blank" rel="noopener">GitHub</a>.</p>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot">
+      <small>&copy; <span data-year>2026</span> Hamza Jafri</small>
+      <div class="links">
+        <a href="mailto:hamzajafri04@gmail.com">Email</a>
+        <a href="https://github.com/nugrad" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/hamza-jafri-b77385245" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
